@@ -72,38 +72,40 @@ class _SplashScreenState extends State<SplashScreen> {
               SizedBox(height: 70.h),
 
               /// 🔹 Progress Bar Section
-              SizedBox(
-                width: 250.w,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    SizedBox(
-                      width: 210.w,
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(15.r),
-                        child: LinearProgressIndicator(
-                          value: _progress,
-                          minHeight: 3.h,
-                          backgroundColor: Colors.grey.shade800,
-                          valueColor: const AlwaysStoppedAnimation<Color>(
-                            Colors.green,
+              Center(
+                child: SizedBox(
+                  width: 250.w,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      SizedBox(
+                        
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(15.r),
+                          child: LinearProgressIndicator(
+                            value: _progress,
+                            minHeight: 3.h,
+                            backgroundColor: Colors.grey.shade800,
+                            valueColor: const AlwaysStoppedAnimation<Color>(
+                              Colors.green,
+                            ),
                           ),
                         ),
                       ),
-                    ),
-
-                    SizedBox(height: 15.h),
-
-                    Text(
-                      'INITIALIZING PREMIUM EXPERIENCE',
-                      style: TextStyle(
-                        fontSize: 13.5.sp,
-                        color: Colors.grey,
-                        fontWeight: FontWeight.bold,
+                
+                      SizedBox(height: 15.h),
+                
+                      Text(
+                        'INITIALIZING PREMIUM EXPERIENCE',
+                        style: TextStyle(
+                          fontSize: 13.5.sp,
+                          color: Colors.grey,
+                          fontWeight: FontWeight.bold,
+                        ),
+                        textAlign: TextAlign.center,
                       ),
-                      textAlign: TextAlign.center,
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
             ],

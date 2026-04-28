@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:rio_labs/home_Page.dart';
 
 class SelectPathScreen extends StatefulWidget {
   const SelectPathScreen({super.key});
@@ -78,21 +79,29 @@ class _SelectPathScreenState extends State<SelectPathScreen> {
             const Spacer(),
 
             /// Continue Button
-            Container(
-              width: double.infinity,
-              height: 55.h,
-              decoration: BoxDecoration(
-                color: const Color(0xFFD4AF37),
-                borderRadius: BorderRadius.circular(12.r),
-              ),
-              alignment: Alignment.center,
-              child: Text(
-                "CONTINUE →",
-                style: GoogleFonts.sora(
-                  fontSize: 16.sp,
-                  fontWeight: FontWeight.w600,
-                  color: Colors.black,
-                  letterSpacing: 1.5,
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => HomePage()),
+                );
+              },
+              child: Container(
+                width: double.infinity,
+                height: 55.h,
+                decoration: BoxDecoration(
+                  color: const Color(0xFFD4AF37),
+                  borderRadius: BorderRadius.circular(12.r),
+                ),
+                alignment: Alignment.center,
+                child: Text(
+                  "CONTINUE →",
+                  style: GoogleFonts.sora(
+                    fontSize: 16.sp,
+                    fontWeight: FontWeight.w600,
+                    color: Colors.black,
+                    letterSpacing: 1.5,
+                  ),
                 ),
               ),
             ),
